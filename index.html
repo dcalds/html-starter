@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- META -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="Palavras">
+    <meta name="description" content="Descrição">
+
+    <!-- ICON -->
+    <link rel="icon" href="./public/favicon.ico" />
+    <link rel="apple-touch-icon" href="./public/icon.png" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- ANIMATION -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- SWIPER -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- TITLE -->
+    <title> HTML - SASS | Starter Template </title>
+</head>
+
+<body>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 1000, // values from 0 to 3000, with step 50ms
+            easing: 'ease', // default easing for AOS animations
+            once: true, // whether animation should happen only once - while scrolling down
+        });
+
+        function openNav() {
+            document.getElementById("overlay-menu").style.width = "100%";
+        }
+        function closeNav() {
+            document.getElementById("overlay-menu").style.width = "0%";
+        }
+        function openModal() {
+            document.getElementById("modal").style.height = "100%";
+            closeNav();
+        }
+        function closeModal() {
+            document.getElementById("modal").style.height = "0%";
+        }
+
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+
+    </script>
+    
+</body>
+
+</html>

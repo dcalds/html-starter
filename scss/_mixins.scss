@@ -1,0 +1,49 @@
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin responsive($screenWidth) {
+  @media (max-width: $screenWidth) {
+    @content;
+  }
+}
+
+@mixin btn($fontSize, $height, $maxWidth, $backColor, $textColor, $backColorHover, $textColorHover) {
+  font-size: $fontSize;
+  height: $height;
+  max-width: $maxWidth; 
+  background: $backColor;
+  color: $textColor;
+  border-radius: 0rem;
+  padding: 0 5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  width: 100%;
+  &:hover {
+    background: $backColorHover;
+    color: $textColorHover;
+  } 
+}
+
+@mixin btnOut($fontSize, $height, $maxWidth, $backColor, $textColor, $backColorHover, $textColorHover) {
+  font-size: $fontSize;
+  height: $height;
+  max-width: $maxWidth; 
+  background: transparent;
+  border: $backColor 2px solid;
+  color: $textColor;
+  border-radius: 0rem;
+  padding: 0 5rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  width: 100%;
+  &:hover {
+    background: $backColorHover;
+    color: $textColorHover;
+  } 
+}
